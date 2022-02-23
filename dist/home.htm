@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Penta-Home</title>
+    <style>
+        main{
+            max-width: 600px;
+            margin: 100px auto 0;
+            background-color: #EEE;
+            border: 1px solid #AAA;
+            border-radius: 6px;
+            box-shadow: 1px 1px 5px #333;
+
+        }
+        button{
+            display: block;
+            width: fit-content;
+            margin: 10px auto;
+            padding: 10px 40px;
+            background-color: #74b9ff;
+            border: 2px solid #9fd9ff;
+            color: #FFF;
+            font-size: 14pt;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #sign__in:disabled{
+            background-color: #DDD;
+        }
+        #sign__in:disabled{
+            cursor: not-allowed;
+        }
+        #phone__number,#validation__code{
+            display: block;
+            margin: 10px auto;
+        }
+        #phone__number__missing,#error{
+            color: red;
+            font-size: 10pt;
+            font-weight: bolder;
+            display: block;
+            width: fit-content;
+            margin: auto;
+        }
+        #recaptcha{
+            width: fit-content;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="tel" id="phone__number" required/>
+        <button id="get__code">get Code</button>
+        <span id="phone__number__missing"></span>
+        <div id="recaptcha"></div>
+        <input type="text" id="validation__code" placeholder="Validation Code"/>
+        <button id="sign__in" disabled>Sign In </button>
+        <div id="error"></div>
+    </main>
+
+<script src="authentication.js"></script>
+</body>
+</html>

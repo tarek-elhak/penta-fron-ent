@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+div.file__uploading,div.success,div.error,.image__input,div.file__dropped,button.submit__button{
+    display: none;
+}
+main{
+    max-width: 600px;
+    padding: 10px;
+    background-color: #DDD;
+    margin: 50px auto;
+    border: 2px solid #BBB;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px #CCC;
+    display: flex;
+    flex-direction: column;
+}
+main .image-row{
+    width: 90%;
+    margin: auto;
+}
+main form{
+    width: 100%;
+    margin: auto;
+    background-color: #DDD;
+}
+main form label{
+    display: block;
+    padding: 40px;
+    border: 2px dashed #666;
+}
+.box__input i{
+    width: fit-content;
+    margin: auto;
+    font-size: 40pt;
+    color: cadetblue;
+    display: block;
+}
+main form.submit__button .submit__button{
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 10px 40px;
+    background-color: #74b9ff;
+    border: 2px solid #9fd9ff;
+    color: #FFF;
+    font-size: 14pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box__input p{
+    width: fit-content;
+    margin: 6px auto;
+    font-size: 10pt;
+}
+main form.is__dragover{
+    background-color: #FFF;
+}
+
+main form.file__uploading .file__uploading{
+    display: block;
+    position: relative;
+    text-align: center;
+    height: 20px;
+    border: 1px solid #1e517b;
+    border-radius: 20px;
+}
+main form.file__uploading .file__uploading .text__progress{
+    position: relative;
+    z-index: 1;
+}
+main form.file__uploading .upload__progress{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: #00b5cc;
+    border-radius: 20px;
+}
+main form.file__uploading .box__input{
+    display: none;
+}
+main form.upload__completed .success{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 5px 20px;
+    background-color: #74b9ff;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+}
+main form.file__dropped .file__dropped{
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    color: #049372;
+    background-color: #c8f7c5;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+main form.file__dropped .box__input{
+    display: none;
+}
+main .image__row__wrapper{
+    margin-top: 10px;
+    background-color: #FFF;
+    padding: 20px;
+}
+main .image-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.display-btn .fa-eye,.fa-minus-circle{
+    font-size: 15pt;
+    padding: 5px;
+    color: #FFF;
+
+}
+.display-btn,.delete-btn{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.display-btn{
+    background-color: #00cec9;
+}
+.delete-btn{
+    background-color: #d63031;
+}
+.viewed__image{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
